@@ -1,0 +1,37 @@
+insert into public."payment"("PaymentType")
+Values('Kredi Kartı');
+insert into public."payment"("PaymentType")
+Values('Banka Kartı');
+insert into public."payment"("PaymentType")
+Values('Paypal');
+insert into public."payment"("PaymentType")
+Values('Kripto');
+insert into public."payment"("PaymentType")
+Values('Kupon');
+insert into public."payment"("PaymentType")
+Values('Papara');
+
+select * from public."payment"
+
+insert into public."uyetipi"("Uyetype")
+Values('Basic');
+insert into public."uyetipi"("Uyetype")
+Values('Premium');
+
+select * from public."uyetipi"
+
+insert into public."uye"("Name","Surname","Eposta","Sifre","PaymentId","UyetipiId")
+Values('Engin','Yıldız','engin@gmail.com','1234',6,2);
+insert into public."uye"("Name","Surname","Eposta","Sifre","PaymentId","UyetipiId")
+Values('Dilan','Yılmaz','dilan@gmail.com','1907',2,1);
+
+select * from uye
+
+
+
+
+
+
+
+
+

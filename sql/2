@@ -1,0 +1,48 @@
+/*root*/
+CREATE table public."film"
+( "Id" serial,
+  "Name" VARCHAR(50) not NULL ,
+  "IMDB" NUMERIC(3,1),
+  "Time" int,
+  "VisionDate" date not null,
+  "YonetmenId" int not null,
+  "KategoriId" int not null,
+  "ReklamId" int not null,
+  CONSTRAINT Film_pkey PRIMARY key("Id"),
+  CONSTRAINT "YonetmenId_FK" FOREIGN key("YonetmenId") REFERENCES public."yonetmen"("Id"),
+  CONSTRAINT "KategoriId_FK" FOREIGN key("KategoriId") REFERENCES public."kategori"("Id"),
+  CONSTRAINT "ReklamId_FK" FOREIGN key("ReklamId") REFERENCES public."reklam"("Id")
+);
+
+/*root*/
+CREATE table public."dizi"
+( "Id" serial,
+  "Name" VARCHAR(50) not NULL ,
+  "IMDB" NUMERIC(3,1),
+  "Time" int,
+  "VisionDate" date not null,
+  "YonetmenId" int not null,
+  "KategoriId" int not null,
+  "ReklamId" int not null,
+  CONSTRAINT Dizi_pkey PRIMARY key("Id"),
+  CONSTRAINT "YonetmenId_FK" FOREIGN key("YonetmenId") REFERENCES public."yonetmen"("Id"),
+  CONSTRAINT "KategoriId_FK" FOREIGN key("KategoriId") REFERENCES public."kategori"("Id"),
+  CONSTRAINT "ReklamId_FK" FOREIGN key("ReklamId") REFERENCES public."reklam"("Id")
+);
+create table public."reklam"
+( "Id" serial, 
+  "ReklamType" varchar(10) not null,
+  CONSTRAINT reklam_pkey PRIMARY key("Id")
+);
+CREATE table public."yonetmen"
+( "Id" serial,
+  "Name" VARCHAR(20) not NULL ,
+  "Surname" VARCHAR(20) not NULL,
+  "Birthday" date,
+  CONSTRAINT Yonetmen_pkey PRIMARY key("Id")
+);
+CREATE table public."kategori"
+( "Id" serial,
+  "KategoriType" VARCHAR(20) not NULL,
+  CONSTRAINT Kategori_pkey PRIMARY key("Id")
+);

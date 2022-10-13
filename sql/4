@@ -1,0 +1,80 @@
+insert into public."kategori"("KategoriType")
+Values('Aksiyon');
+insert into public."kategori"("KategoriType")
+Values('Korku');
+insert into public."kategori"("KategoriType")
+Values('Romantik');
+insert into public."kategori"("KategoriType")
+Values('Bilimkurgu');
+insert into public."kategori"("KategoriType")
+Values('Gerilim');
+insert into public."kategori"("KategoriType")
+Values('Fantastik');
+insert into public."kategori"("KategoriType")
+Values('Macera');
+insert into public."kategori"("KategoriType")
+Values('Sanat');
+insert into public."kategori"("KategoriType")
+Values('Drama');
+insert into public."kategori"("KategoriType")
+Values('Komedi');
+insert into public."kategori"("KategoriType")
+Values('Savas');
+insert into public."kategori"("KategoriType")
+Values('Kara Mizah');
+select * from public."kategori"
+
+insert into public."reklam"("ReklamType")
+values('Var');
+insert into public."reklam"("ReklamType")
+values('Yok');
+
+
+
+insert into public."yonetmen"("Name","Surname","Birthday")
+values('Peter Robert','Jackson','1.1.1966');
+
+
+
+
+insert into public."film"("Name","IMDB","Time","VisionDate","YonetmenId","KategoriId","ReklamId")
+Values('Hobbit:Beklenmedik Yolculuk',9.3,169,'14.12.2012',1,6,2);
+insert into public."film"("Name","IMDB","Time","VisionDate","YonetmenId","KategoriId","ReklamId")
+Values('Hobbit:Hobbit: Smaug un Çorak Toprakları',8,161,'13.12.2013',1,6,2);
+
+select * from public."film";
+select * from public."yonetmen";
+select * from public."reklam";
+select * from public."dizi";
+
+insert into public."yonetmen"("Name","Surname","Birthday")
+Values('Francis Ford','Coppola','07.04.1939');
+insert into public."yonetmen"("Name","Surname","Birthday")
+Values('Frank','Darabant','28.01.1959');
+insert into public."yonetmen"("Name","Surname","Birthday")
+Values('Christopher','Nolan','30.07.1970');
+insert into public."yonetmen"("Name","Surname","Birthday")
+Values('Vince','Gilligan','10.02.1967');
+insert into public."yonetmen"("Name","Surname","Birthday")
+Values('Alan','Taylor','13.01.1959');
+insert into public."yonetmen"("Name","Surname","Birthday")
+Values('Mark','Gatiss','17.10.1966');
+
+
+/* ------------------------- */
+
+insert into public."film"("Name","IMDB","Time","VisionDate","YonetmenId","KategoriId","ReklamId")
+Values('The Godfather',9.2,175,'15.03.1972',2,9,1);
+insert into public."film"("Name","IMDB","Time","VisionDate","YonetmenId","KategoriId","ReklamId")
+Values('The Shawshank Redemption',9.2,142,'23.09.1959',3,9,1);
+insert into public."film"("Name","IMDB","Time","VisionDate","YonetmenId","KategoriId","ReklamId")
+Values('Inception',8.7,148,'08.07.2010',4,4,2);
+
+/* ------------------------- */
+
+insert into public."dizi"("Name","IMDB","Time","VisionDate","YonetmenId","KategoriId","ReklamId")
+Values('Breaking Bad',9.4,49,'20.01.2008',5,12,1);
+insert into public."dizi"("Name","IMDB","Time","VisionDate","YonetmenId","KategoriId","ReklamId")
+Values('Game of Thrones',9.1,57,'17.04.2011',6,1,2);
+insert into public."dizi"("Name","IMDB","Time","VisionDate","YonetmenId","KategoriId","ReklamId")
+Values('Sherlock',9,88,'25.07.2010',7,4,2);

@@ -1,0 +1,22 @@
+CREATE table public."uye"
+( "Id" serial,
+  "Name" VARCHAR(20) not NULL ,
+  "Surname" VARCHAR(20) not NULL,
+  "Eposta" VARCHAR(30) not NULL,
+  "Sifre" VARCHAR(10) not NULL,
+  "PaymentId" int not NULL,
+  "UyetipiId" int not NULL,
+  CONSTRAINT Uye_pkey PRIMARY key("Id"),
+  CONSTRAINT "PaymentId_FK" FOREIGN key("PaymentId") REFERENCES public."payment"("Id"),
+  CONSTRAINT "UyetipiId_FK" FOREIGN key("UyetipiId") REFERENCES public."uyetipi"("Id")
+);
+CREATE table public."payment"
+( "Id" serial,
+  "PaymentType" varchar(20) not null,
+  CONSTRAINT Payment_pkey PRIMARY key("Id")
+);
+CREATE table public."uyetipi"
+( "Id" serial,
+  "Uyetype" VARCHAR(20) not NULL,
+  CONSTRAINT Uyetipi_pkey PRIMARY key("Id")
+);
